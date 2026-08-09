@@ -1,6 +1,6 @@
 This is my JT (JavaTetris) Java Applet game from 2002.
 
-Translated to JavaScript on 8/8/2026 so it runns in browser again.
+Translated to JavaScript on 8/8/2026 so it runs in browser again.
 
 ## . . . CLICK ON THE IMAGE TO PLAY!
 
