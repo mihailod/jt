@@ -1,8 +1,8 @@
-This is my JT (JavaTetris) game from 2002 (in that folder).
+This is my JT (JavaTetris) Java Applet game from 2002.
 
-Will modernize it so it is runnable in browser again, most likely via JavaScript.
+Translated to JavaScript on 8/8/2026 so it runns in browser again.
 
-## Play it
+## . . . CLICK ON THE IMAGE TO PLAY!
 
 [![JT — JavaTetris, running in the browser](jt.png)](https://mihailod.github.io/jt/)
 
@@ -10,4 +10,4 @@ Will modernize it so it is runnable in browser again, most likely via JavaScript
 
 Arrow keys or `7` `8` `9` to move and rotate, `Space` to drop, `P` to pause.
 
-The 2002 Java applet source is preserved untouched in [`2002/`](2002/).
+The 2002 Java Applet source is preserved untouched in [`2002/`](2002/).
