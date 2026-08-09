@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JT — JavaTetris by Mihailo Despotovic</title>
+<meta name="description" content="JT (JavaTetris), written as a Java applet in 2002, transliterated to JavaScript and playable in the browser again.">
+<style>
+  :root { color-scheme: dark; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #c0c0c0;
+    font: 13px/1.5 "DejaVu Sans Mono", Menlo, Consolas, monospace;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 8px calc(16px + env(safe-area-inset-bottom));
+    box-sizing: border-box;
+    overflow: hidden;
+    touch-action: manipulation;
+  }
+
+  canvas {
+    display: block;
+    background: #000;
+    border: 1px solid #222;
+    /* the well is 20px cells; keep the edges hard when scaled up */
+    image-rendering: pixelated;
+  }
+
+  .pad {
+    display: none;
+    gap: 8px;
+  }
+
+  .pad button {
+    width: 62px;
+    height: 46px;
+    background: #111;
+    color: #c0c0c0;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font: inherit;
+    font-size: 18px;
+    line-height: 1;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .pad button:active { background: #222; color: #fff; }
+
+  /* Touch devices get the on-screen pad; keyboards don't need it. */
+  @media (pointer: coarse) {
+    .pad { display: flex; }
+  }
+
+  footer {
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+    line-height: 1.7;
+  }
+
+  footer a { color: #888; }
+  footer a:hover { color: #c0c0c0; }
+  kbd {
+    color: #aaa;
+    border: 1px solid #333;
+    border-radius: 3px;
+    padding: 0 3px;
+  }
+</style>
+</head>
+<body>
+
+<canvas id="jt" width="301" height="401" aria-label="JT tetris playfield"></canvas>
+
+<div class="pad">
+  <button data-action="left" aria-label="Move left">&#9664;</button>
+  <button data-action="rotate" aria-label="Rotate">&#8635;</button>
+  <button data-action="right" aria-label="Move right">&#9654;</button>
+  <button data-action="drop" aria-label="Drop">&#8595;&#8595;</button>
+</div>
+
+<footer>
+  <kbd>&larr;</kbd> <kbd>&rarr;</kbd> move &nbsp; <kbd>&uarr;</kbd> rotate &nbsp;
+  <kbd>space</kbd> drop &nbsp; <kbd>P</kbd> pause<br>
+  JT (JavaTetris) &mdash; written as a Java applet in 2002.
+  <a href="https://github.com/mihailod/jt/tree/master/2002">The original source</a>
+  is kept in <code>2002/</code>.
+</footer>
+
+<script src="tetromino.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
